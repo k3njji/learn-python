@@ -1,0 +1,1835 @@
+@font-face {
+    font-family: Vecna;
+    src: url(Vecna-oppx.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Underdog;
+    src: url(Underdog-Regular.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #051927;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    z-index: 100;
+}
+
+.header1{
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #051927;
+    height: 49px;
+    font-family: Underdog;
+    color: white;
+    align-items: center;
+    font-size: 19px;
+    width: 100%;
+    border-bottom: 4px solid #B4F2FF;
+    justify-content: space-between;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.right{
+    display: flex;
+}
+
+.header1 ul li{
+    display: inline-block;
+    padding-top: 6px;
+    margin-right: 16px;
+}
+
+.profile{
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+    margin-right: 20px;
+}
+
+.header2 {
+    top: 0;
+    position: fixed;
+    background-color: rgba(5, 25, 39, 0.7);
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Vecna;
+    font-size: 40px;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin-top: 49px;
+    border-bottom: 4px solid #B4F2FF;
+}
+
+.middle2{
+    display: flex;
+    align-items: center;
+}
+
+.middle2 img{
+    padding: 0 10px;
+}
+
+.middle2 ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+.middle2 ul li a{
+    text-decoration: none;
+    padding: 0 30px;
+    color: white;
+    transition: ease 0.3s;
+}
+
+.middle2 ul li a:hover{
+    color: #B4F2FF;
+    font-size: 45px;
+}
+
+.left2{
+    margin-left: 32px;
+    margin-top: 10px;
+}
+
+.right2{
+    margin-right: 32px;
+    margin-top: 10px;
+}
+
+.theline{
+    display: none;
+}
+
+@media only screen and (max-width:1370px) {
+    .middle2 img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .theline {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .theline .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px;
+    }
+
+    .middle2 {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: -120%;
+        right: 0;
+        width: 100vw;
+        background-color: #051927;
+        transition: 0.2s;
+        border-top: #B4F2FF solid 3px;
+        border-bottom: #B4F2FF solid 3px;
+    }
+
+    .right2{
+        align-items: center;
+        margin-right: 10%;
+    }
+
+    .middle2.active {
+        height: max-content;
+        left: 0;
+    }
+
+    .middle2 ul {
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .middle2.active ul {
+        opacity: 1;
+    }
+
+    .middle2 ul li {
+        margin: 20px;
+    }
+}
+
+
+.page{
+    margin-top: 135px;
+    display: flex;
+    height: 81px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page span{
+    font-size: 60px;
+    font-family: Vecna;
+    color: white;
+}
+
+.page img{
+    padding: 0 35px;
+}
+
+.content1 {
+    position: relative;
+    width: 100%;
+    border-bottom: #B4F2FF solid 4px;
+}
+
+.sos {
+    width: 100%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    width: 430px;
+    height: 145px;
+    text-align: center;
+    color: #B4F2FF;
+}
+
+.text-overlay h1{
+    font-family: Vecna;
+    font-size: 40px;
+    color:#B4F2FF;
+}
+
+.text-overlay p{
+    font-family: Vecna;
+    font-size: 23px;
+    text-align: center;
+    color:#B4F2FF
+}
+
+.star{
+    display: flex;
+    background-image: url(images/starbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    font-family: Vecna;
+    color: #B4F2FF;
+    border-bottom: #B4F2FF solid 4px;
+}
+
+.trailer{
+    margin: 0 100px;
+}
+
+.trailer p{
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.trailer img{
+    transition: ease 0.3s;
+}
+
+.trailer img:hover{
+    transform: scale(1.1);
+}
+
+.play{
+    margin: 0 100px;
+}
+
+.play p{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.play img{
+    margin: 15px 15px 15px 15px;
+    align-self: auto;
+    transition: ease 0.3s;
+}
+
+.play img:hover{
+    transform: scale(1.2);
+}
+
+.feature{
+    background-image: url(images/mahome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Vecna;
+    padding-bottom: 55px;
+    border-bottom: #B4F2FF solid 4px;
+}
+
+.feature div h1{
+    font-size: 60px;
+    color: white;
+    padding-top: 45px;
+    text-align: center;
+}
+
+.adv{
+    display:flex;
+    position: relative;
+    background-color: #B4F2FF;
+    width: 1015px;
+    height: 335px;
+    margin-top: 55px;
+    margin-bottom: 45px;
+    left: 10%;
+    border-radius: 10px 10px;
+    align-items: center;
+}
+
+.adv img{
+    width: 444px;
+    height: 220px;
+    margin: 0 50px;
+}
+
+.featurexp1{
+    text-align: center;
+    height: auto;
+    width: 386px;
+}
+
+.adv div{
+    padding: 0 20px;
+}
+
+h2{
+    font-size: 34px;
+}
+
+h4{
+    font-size: 17px;
+}
+
+.tbc {
+    display: flex;
+    position: relative;
+    background-color: #B4F2FF;
+    width: 1015px;
+    height: 335px;
+    margin-top: 55px;
+    border-radius: 10px 10px;
+    margin-left: auto;
+    right: 10%;
+    align-items: center;
+    justify-content: right;
+}
+
+.tbc img{
+    width: 444px;
+    height: 248px;
+    margin: 0 50px;
+}
+
+.featurexp2{
+    text-align: center;
+    height: auto;
+    width: 428px;
+}
+
+.news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Vecna;
+    font-size: 40px;
+    margin: 35px;
+    color: white;
+}
+
+.news img{
+    margin: 0 20px;
+}
+
+.arrow{
+    width: 18px;
+    height: 29px;
+}
+
+.between{
+    background-color: #B4F2FF;
+    border: none;
+    width: 80%;
+    height: 4px;
+    margin: 0 auto;
+}
+
+.media{
+    margin: 35px;
+    display: block;
+    text-align: center;
+    font-family: Vecna;
+    color: white;
+    font-size: 30px;
+}
+
+.media img{
+    margin: 15px 20px 0px 20px;
+}
+
+.playedon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    list-style: none;
+}
+
+.playedon img{
+    margin: 0 35px;
+}
+
+.toc{
+    display: block;
+    text-align: center;
+    font-family: Underdog;
+    color: white;
+}
+
+.toc img{
+    margin: 45px 35px;
+}
+
+.toc span{
+    font-size: 30px;
+}
+
+.toc li{
+    font-size: 25px;
+    display: inline-block;
+    list-style: none;
+    padding: 35px 50px
+}
+
+hr{
+    background-color: #B4F2FF;
+    border: none;
+    height: 4px;
+}
+
+@media only screen and (max-width: 1450px){
+
+    .text-overlay h1{
+        font-size: 35px;
+    }
+    
+    .text-overlay p{
+        font-size: 20px;
+    }
+
+    .star{
+        height: 600px;;
+    }
+
+    .play img{
+        width: 135px;
+        margin: 15px;
+    }
+
+    .trailer img{
+        width: 475px;
+    }
+
+    
+    .trailer p{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .play p{
+        font-size: 45px;
+    }
+
+    .play{
+        margin: 0 50px;
+    }
+
+    .adv{
+        width: 850px;
+        /* height: 335px; */
+    }
+    
+    .adv img{
+        width: 350px;
+        height: 175px;
+        margin: 0 30px;
+    }
+    
+    .featurexp1{
+        text-align: center;
+        height: auto;
+        width: 350px;
+    }
+    
+    .adv div{
+        margin: 0 20px;
+    }
+    
+    h2{
+        font-size: 30px;
+    }
+    
+    h4{
+        font-size: 15px;
+    }
+    
+    .tbc{
+        width: 850px;
+        right: 5%;
+    }
+    
+    .tbc img{
+        width: 350px;
+        height: 180px;
+        margin: 0 30px;
+    }
+    
+    .featurexp2{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+
+    .text-overlay{
+        width: 320px;
+        top: 33%;
+    }
+
+    .text-overlay h1{
+        font-size: 28px;
+    }
+    
+    .text-overlay p{
+        font-size: 17px;
+    }
+
+    .star{
+        height: 475px;
+    }
+
+    .play img{
+        width: 100px;
+        margin: 5px;
+    }
+
+    .play{
+        margin: 0 40px;
+    }
+
+    .trailer{
+        margin: 0 40px;
+    }
+
+    .trailer img{
+        width: 375px;
+    }
+    
+    .trailer p{
+        font-size: 25px;
+    }
+    
+    .play p{
+        font-size: 30px;
+    }
+
+    .play{
+        margin: 0 25px;
+    }
+
+    .feature div h1{
+        font-size: 45px;
+    }
+
+    .adv{
+        width: 675px;
+        height: 250px;
+        left: 5%;
+    }
+
+    .adv img{
+        width: 280px;
+        height: 150px;
+        margin: 0 20px;
+    }
+    
+    .featurexp1{
+        width: 375px;
+    }
+    
+    .adv div{
+        margin: 0 20px;
+    }
+    
+    h2{
+        font-size: 26px;
+    }
+    
+    h4{
+        font-size: 13px;
+    }
+    
+    .tbc{
+        width: 675px;
+        height: 250px;
+        right: 5%;
+    }
+    
+    .tbc img{
+        width: 250px;
+        height: 130px;
+        margin: 0 10px;
+    }
+    
+    .featurexp2{
+        width: 375px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .playedon{
+        display: block;
+        text-align: center;
+    }
+
+    .playedon li{
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .page img{
+        display: none;
+    }
+
+    .right ul{
+        display: none;
+    }
+
+    .page span{
+        font-size: 45px;
+    }
+    
+    .news span{
+        font-size: 30px;
+    }
+
+    .playedon img{
+        width: 150px;
+    }
+
+    .toc span{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .media img{
+        width: 30px;
+    }
+
+    .toc img{
+        width: 60px;
+    }
+
+    .toc span{
+        font-size: 22px;
+    }
+
+    .toc li{
+        font-size: 20px;
+        display: inline-block;
+        list-style: none;
+        padding: 25px 50px
+    }
+
+    .right2 img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 760px){
+
+    .content1 {
+        position: static;
+        text-align: center;
+    }
+    
+    .sos {
+        width: 100%;
+    }
+    
+    .text-overlay {
+        position: static;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .trailer{
+        margin: 0;
+    }
+
+    .trailer img{
+        width: 345px;
+        margin: auto;
+    }
+
+    .star{
+        margin-top: 30px;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        height: 650px;
+    }
+
+    .play{
+        margin: 30px 0;
+    }
+
+    .feature div h1{
+        font-size: 35px;
+        width: 320px;
+        margin: auto;
+    }
+
+    .adv{
+        display:flex;
+        flex-direction: column;
+        width: 350px;
+        height: 500px;
+        margin: auto;
+        left: 0%;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .tbc {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 350px;
+        height: 500px;
+        margin: auto;
+        right: 0%;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+    .adv img{
+        width: 300px;
+        height: 165px;
+        margin: 25px 0;
+    }
+
+    .tbc img{
+        width: 300px;
+        height: 165px;
+        margin: 30px 0;
+    }
+
+    .featurexp1{
+        margin: auto;
+        width: 280px;
+        height: 350px;
+    }
+
+    .featurexp2{
+        margin: auto;
+        width: 280px;
+        height: 350px;
+    }
+
+    .featurexp1 h4{
+        margin-top: 10px;
+    }
+
+    .featurexp2 h4{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+
+    .text-overlay{
+        width: 300px;
+    }
+
+    .text-overlay h1{
+        font-size: 28px;
+    }
+
+    .text-overlay p{
+        margin: 18px 0;
+        font-size: 15px;
+    }
+}
+
+/* HOMEPAGE DONE (RESPONSIVE BELOM) */
+
+/* START CHARACTERS */
+
+body.char1 {
+    background-color: #051927;
+    width: 100%;
+    margin-top:135px;
+}
+
+.bgimage{
+    background-image: url(images/fullmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page2 span{
+    font-size: 60px;
+    font-family: Vecna;
+    color: white;
+}
+
+.page2 img{
+    padding: 0 35px;
+}
+
+.type{
+    display: flex;
+    font-family: Vecna;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.hero{
+    margin-left: 15%;
+}
+
+.herotext{
+    font-family: Vecna;
+    font-size: 60px;
+    color: #E7C496;
+    padding-bottom: 45px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.zale {
+    display: flex;
+    background: url(./images/herobanner.png);
+    height: 124px;
+    width: 530px;
+    background-size: cover;
+    margin-bottom: 80px;
+    transition: 1s ease;
+}
+
+.zale img{
+    margin-top: -32%;
+    margin-left: 12%;
+    transition: 0.3s ease;
+}
+
+.zale:hover img{
+    transform: scale(1.2);
+    margin-top: -50px;
+}
+
+.charnamehero{
+    padding: 0 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #092A41;
+}  
+
+.charnamehero p{
+    font-size: 40px;
+}
+
+.charnamehero h3{
+    padding: 0 10px;
+    font-size: 30px;
+}
+
+.enemy{
+    margin-right: 15%;
+}
+
+.enemytext{
+    font-family: Vecna;
+    font-size: 60px;
+    color: #8C8C8C;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.charnameenemy{
+    text-align: right;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #092A41;
+}  
+
+.charnameenemy p{
+    font-size: 40px;
+}
+
+.charnameenemy h3{
+    padding: 0 10px;
+    font-size: 30px;
+}
+
+.mist {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        background: url(./images/enemybanner.png);
+        height: 124px;
+        width: 530px;
+        background-size: cover;
+        margin-bottom: 80px;
+}
+
+.mist img{
+    margin-top: -32%;
+    margin-left: -12%;
+    transition: 0.3s ease;
+}
+
+.mist:hover img{
+    transform: scale(1.2);
+    margin-top: -75px;
+}
+
+.more{
+    font-size: 60px;
+    font-family: Vecna;
+    text-align: center;
+    color: white;
+    padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 1350px){
+    .hero{
+        margin-left:5%;
+    }
+    .enemy{
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .hero{
+        margin-left:2%;
+    }
+    .enemy{
+        margin-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .zale {
+        height: 80px;
+        width: 360px;
+    }
+
+    .mist {
+        height: 80px;
+        width: 360px;
+    }
+
+    .enemytext{
+        font-size: 40px;
+    }
+
+    .herotext{
+        font-size: 40px;
+    }
+
+    .charnameenemy p{
+        font-size: 30px;
+    }
+    
+    .charnameenemy h3{
+        padding: 0 10px;
+        font-size: 22px;
+    }
+
+    .charnamehero p{
+        font-size: 30px;
+    }
+    
+    .charnamehero h3{
+        padding: 0 10px;
+        font-size: 22px;
+    }
+
+    .zale img{
+        width: 80px;
+    }
+
+    .mist img{
+        margin-top: -32%;
+        margin-left: -12%;
+        width: 80px;
+    }
+
+    .zalepic img{
+        margin-top: -45%;
+        width: 70px;
+    }
+
+    .notzale img{
+        margin-top: -23%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .type{
+        display: block;
+        justify-content: center;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enemy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .more{
+        font-size: 35px;
+    }
+}
+    
+
+/* FanArt */
+.trio{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.fanart{
+    width: 1000px;
+    height: 1800px;
+    background-color: #D9D9D9;
+    align-items: center;
+    margin: auto;
+    margin-top: -200px;
+    border-radius: 10px;
+    font-family: Underdog;
+    font-size: 20px;
+    color: #051927;
+}
+
+.firstrow{
+    display: flex;
+    justify-content: center;
+
+}
+
+.leftside, .rightside{
+    display: block;
+    margin-top: 250px;
+    height: 450px;
+    width: 400px;
+    background-color: #B4F2FF;
+    border: black 2px solid;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.leftside p, .rightside p{
+    margin-top: 10px;
+}
+
+.desc ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.wnf{
+    margin: 15px 0;
+}
+
+.cookrior{
+    margin: 30px 0;
+}
+
+.leftside2, .rightside2{
+    display: block;
+    margin-top: 7%;
+    height: 450px;
+    width: 400px;
+    background-color: #B4F2FF;
+    border: black 2px solid;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.leftside2 p, .rightside2 p{
+    margin-top: 10px;
+}
+
+.sosfanart{
+    margin: 20px 0;
+}
+
+.torm{
+    margin: 80px 0;
+}
+
+.suncrest{
+    margin: 95px 0;
+}
+
+.b4disaster{
+margin: 20px 0;
+}
+
+.fanartfoot{
+    margin-top: 3%;
+    background-color: #B4F2FF;
+    border: none;
+    height: 4px;
+}
+
+@media only screen and (max-width: 1100px){
+
+    .trio img{
+       width: 650px;
+    }
+
+    .fanart{
+        width: 720px;
+        height: 1325px;
+        font-size: 16px;
+    }
+
+    .leftside, .rightside{
+        height: 315px;
+        width: 280px;
+    }
+
+    .wnf img{
+        width: 175px;
+    }
+    
+    .cookrior img{
+        width: 180px;
+    }
+
+    .leftside2, .rightside2{
+        height: 315px;
+        width: 280px;
+    }
+
+    .sosfanart img{
+        width: 175px;
+    }
+    
+    .torm img{
+        width: 140px;
+    }
+    
+    .suncrest img{
+        width: 110px;
+    }
+    
+    .b4disaster img{
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 740px){
+
+    .trio img{
+       width: 500px;
+    }
+
+    .firstrow{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .fanart{
+        width: 500px;
+        height: 2250px;
+        font-size: 15px;
+        margin-top: -140px;
+    }
+
+    .leftside{
+        margin-top: 150px;
+    }
+
+    .rightside{
+        margin-top: 7%;
+    }
+    
+}
+
+@media only screen and (max-width: 520px){
+
+    .trio img{
+       width: 340px;
+    }
+
+    .fanart{
+        width: 300px;
+        height: 2160px;
+        font-size: 15px;
+        margin-top: -90px;
+    }
+
+    .leftside, .rightside{
+        height: 310px;
+        width: 256px;
+    }
+
+    .leftside{
+        margin-top: 120px;
+    }
+
+    .leftside2, .rightside2{
+        height: 315px;
+        width: 256px;
+        margin-top: 9%;
+    }
+
+    .firstrow{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* FANART RESPON BELOM */
+
+/* PROFILE */
+
+.page2{
+    margin-top: 55px;
+    margin-bottom: 15px;
+    display: flex;
+    height: 81px;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup{
+    width: 720px;
+    height: 970px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto;
+    font-family: Underdog;
+    font-size: 15px;
+}
+
+.bigstudio{
+    text-align: center;
+}
+
+.bigstudio img{
+    padding-top: 15px;
+}
+
+.bigstudio div{
+    padding: 10px 0;
+}
+
+.signuphr{
+    height: 1px;
+    background-color: black;
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.signupwithsosmed{
+    text-align: center;
+    font-family: Arial;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.signupwithsosmed img{
+    margin: 20px;
+}
+
+.lineor{
+    background-color: black;
+    border: none;
+    height: 40px;
+    width: 30%;
+}
+
+.or{
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+    font-size: 20px;
+    align-items: center;
+}
+
+.lineor{
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 1px;
+    width: 240px;
+    justify-content: center;
+}
+
+.emailaddress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: Arial;
+    padding: 15px;
+}
+
+input[type=text]{
+    height: 40px;
+    width: 427px;
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+}
+
+input[type=password]{
+    height: 40px;
+    width: 427px;
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+}
+
+.emailcontain{
+    display: block;
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.emailcontain p{
+    text-align: left;
+    padding-left: 22%;
+    padding-top: 2%;
+    padding-bottom: 0.3%;
+}
+
+.checkcountry{
+    padding-left: 20%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.red{
+    color: red;
+    text-decoration: underline;
+}
+
+.checkbox{
+    margin-right: 26%;
+    width: 275px;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox p{
+    padding-left: 25px;
+}
+
+.checkbox input{
+    margin-left: 5px;
+}
+
+input.check{
+    height: 30px;
+    width: 30px;
+    align-items: center;
+}
+
+.selectcountry{
+    width: 128px;
+    height: 34px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+}
+
+.pnc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+}
+
+.bigpnc{
+    padding: 15px;
+    font-size: 18px;
+}
+
+.smallpnc{
+    width: 400px;
+    height: 55px;
+}
+
+.register{
+    padding: 12px; 
+}
+
+.buttonregis{
+    height: 55px;
+    width: 288px;
+    border-radius: 10px;
+    background-color: red;
+    border-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+.profilee{
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 800px){
+    
+    .signup{
+        width: 570px;
+        height: 870px;
+    }
+    
+    .bigstudio img{
+        padding-top: 12px;
+        width: 200px;
+        height: auto;
+    }
+    
+    .bigstudio div{
+        padding: 8px 0;
+    }
+    
+    .signupwithsosmed{
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    .signupwithsosmed img{
+        height: 55px;
+        width: 55px;
+    }
+    
+    .emailaddress{
+        padding: 10px;
+    }
+    
+    .emailcontain p{
+        padding-left: 15%;
+    }
+    
+    .checkbox{
+        margin-right: 26%;
+        width: 275px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    input.check{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .bigpnc{
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    
+    .buttonregis{
+        height: 45px;
+        width: 240px;
+    }
+
+    .signupwithsosmed img{
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    
+    .signup{
+        width: 380px;
+        height: 785px;
+        font-size: 13px;
+    }
+
+    .stayconn{
+        width: 250px;
+    }
+    
+    .bigstudio img{
+        padding-top: 12px;
+        width: 170px;
+        height: auto;
+    }
+    
+    
+    .signupwithsosmed{
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    
+    .signupwithsosmed img{
+        height: 35px;
+        width: 35px;
+    }
+    
+    .emailaddress{
+        padding: 8px;
+        font-size: 15px;
+    }
+    
+    .emailcontain p{
+        padding-left: 15%;
+    }
+    
+    .lineor{
+        width: 120px;
+    }
+
+    input[type=text]{
+        width: 300px;
+    }
+    
+    input[type=password]{
+        width: 300px;
+    }
+
+    .checkbox{
+        margin-right: 0%;
+        width: 275px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    input.check{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .bigpnc{
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    .smallpnc{
+        font-size: 13px;
+        width: 300px;
+    }
+    
+    .buttonregis{
+        height: 40px;
+        width: 200px;
+    }
+
+    .already{
+        font-size: 13px;
+    }
+
+    .checkbox p{
+        padding-left: 10px;
+    }
+
+    .selectcountry{
+       margin-left: -28px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .page2 span{
+        font-size: 30px;
+    }
+    .page2 img{
+        display: none;
+    }
+
+    .signup{
+        border-radius: 5px;
+        width: 365px;
+    }
+
+}
+
+/* Character Detail */
+
+.chardetail {
+    display: flex;
+    background: url(./images/herobanner.png);
+    width: 530px;
+    background-size: cover;
+    margin: auto;
+    transition: 1s ease;
+    margin-bottom: 3%;
+    font-family: Vecna;
+}
+
+.chardetail img{
+    margin-top: -32%;
+    margin-left: 12%;
+    transition: 0.3s ease;
+}
+
+.chardetail:hover img{
+    transform: scale(1.2);
+    margin-top: -50px;
+}
+
+.containbg{
+    padding-top: 4%;
+}
+
+.thedetails{
+    height: 565px;
+    width: 960px;
+    background-color: #E7C496;
+    background-image: url(./images/zalebg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.animation img{
+    width: 180px;
+    height: 180px;
+    margin-left: 10px;
+}
+
+.animation ul li{
+    list-style: none;
+}
+
+.vertline{
+    margin-left: 10px;
+    border-left: 2px solid black;
+    height: 500px;
+}
+
+.explanation{
+    width: 665px;
+    height: 375px;
+    color: black;
+    font-size: 30px;
+    font-family: Vecna;
+    padding-left: 60px;
+}
+
+.detailine{
+    margin-top: 75px;
+    background-color: #B4F2FF;
+    border: none;
+    height: 4px;
+}
+
+@media only screen and (max-width: 1100px){
+    
+    .thedetails{
+        height: 400px;
+        width: 700px;
+        align-items: center;
+    }
+    
+    .animation img{
+        width: 130px;
+        height: 130px;
+        margin-left: 5px;
+    }
+    
+    .vertline{
+        border-left: 1px solid black;
+        height: 350px;
+        margin-left: 5px;
+    }
+    
+    .explanation{
+        width: 500px;
+        height: 375px;
+        font-size: 26px;
+    }
+    
+    .detailine{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 720px){
+
+    .charnamehero p{
+        font-size: 35px;
+    }
+
+    .charnamehero h3{
+        font-size: 20px;
+    }
+
+    .vertline{
+        display: flex;
+        border-left: 0;
+        border-top: black 1px solid;
+        width: 400px;
+        margin-top: 10px;
+        height: 0;
+        margin: auto;
+    }
+
+    .chardetail {
+        width: 360px;
+        height: 80px;
+        background-size: cover;
+        margin: auto;
+        margin-top: 25px;
+    }
+    
+    .chardetail img{
+        width: 70px;
+        margin-top: -50%;
+    }
+    
+    .thedetails{
+        margin-top: 30px;
+        height: 650px;
+        width: 500px;
+        align-items: center;
+        display: block;
+        align-content: center;
+    }
+    
+    .animation img{
+        width: 130px;
+        height: 130px;
+        margin-left: 5px;
+    }
+
+    .animation{
+        display: flex;
+        justify-content: center;
+    }
+
+    .animation ul li{
+        display: inline-block;
+    }
+    
+    .explanation{
+        margin: auto;
+        padding-left: 0;
+        height: 500px;
+        width: 350px;
+        font-size: 28px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .thedetails{
+        height: 510px;
+        width: 350px;
+        border-radius: 10px;
+    }
+    
+    .animation img{
+        width: 80px;
+        height: 80px;
+        margin-left: 5px;
+    }
+    
+    .vertline{
+        display: flex;
+        border-left: 0;
+        border-top: black 1px solid;
+       width: 300px;
+        margin-top: 10px;
+        height: 0;
+        margin: auto;
+    }
+
+    .explanation{
+        margin-top: 15px;
+        height: 500px;
+        width: 300px;
+        font-size: 23px;
+    }
+}

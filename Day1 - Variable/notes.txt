@@ -1,0 +1,5 @@
+PS C:\Python by Angela Yu> & C:/Users/kenzi/AppData/Local/Microsoft/WindowsApps/python3.9.exe "c:/Python by Angela Yu/Day1/code.py"
+hello world
+
+C:/Users/kenzi/AppData/Local/Microsoft/WindowsApps/python3.9.exe, this represent the python module we are using
+"c:/Python by Angela Yu/Day1/code.py", this represent the folder we are using when running the code
