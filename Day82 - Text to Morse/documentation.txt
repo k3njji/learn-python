@@ -1,0 +1,4 @@
+1. Use a dict to store all morse code
+2. Iterate each character in the word
+3. While iterating, grab the value
+4. Store each value in an array

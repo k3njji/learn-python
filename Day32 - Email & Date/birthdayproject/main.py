@@ -40,6 +40,7 @@ if birthday_people:
                 to_addrs=person["email"],
                 msg=f"Subject:Happy Birthday!\n\n{personalized_letter}"
             )
+        
 
 print("yes")
 

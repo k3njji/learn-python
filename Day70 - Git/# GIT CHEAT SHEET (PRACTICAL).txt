@@ -1,0 +1,122 @@
+# GIT CHEAT SHEET (PRACTICAL)
+
+## INIT & SETUP
+
+git init                         # initialize repo
+git clone <repo_url>             # clone existing repo
+
+git config --global user.name "Your Name"
+git config --global user.email "[you@example.com](mailto:you@example.com)"
+
+## STATUS & TRACKING
+
+git status                       # see current changes
+git diff                         # see unstaged changes
+git diff --staged                # see staged changes
+
+## ADD & COMMIT
+
+git add <file>                   # stage file
+git add .                        # stage everything
+
+git commit -m "message"          # commit staged changes
+git commit -am "message"         # stage + commit tracked files
+
+## BRANCHING (VERY IMPORTANT)
+
+git branch                       # list branches
+git branch <name>                # create branch
+git checkout <branch>            # switch branch
+git checkout -b <branch>         # create + switch
+
+git merge <branch>               # merge into current branch
+
+## REMOTE (GITHUB / GITLAB)
+
+git remote add origin <url>      # connect repo
+git remote -v                    # check remotes
+
+git push -u origin main         # first push
+git push                        # push changes
+git pull                        # pull latest changes
+
+## WORKFLOW (MOST COMMON)
+
+# 1. pull latest
+
+git pull
+
+# 2. create branch
+
+git checkout -b feature-name
+
+# 3. work + commit
+
+git add .
+git commit -m "feature added"
+
+# 4. push
+
+git push -u origin feature-name
+
+# 5. merge (via PR or locally)
+
+## UNDO / FIX MISTAKES (IMPORTANT)
+
+git restore <file>               # discard changes
+git restore --staged <file>      # unstage file
+
+git reset --soft HEAD~1          # undo commit (keep changes)
+git reset --hard HEAD~1          # undo commit (delete changes)
+
+git commit --amend               # edit last commit
+
+## LOGGING
+
+git log                         # full history
+git log --oneline               # compact history
+
+## .GITIGNORE (IMPORTANT)
+
+# create .gitignore file:
+
+.env
+.venv/
+node_modules/
+**pycache**/
+*.log
+
+## STASH (SAVE WORK TEMPORARILY)
+
+git stash                        # save changes
+git stash pop                    # restore changes
+
+## CLEANUP
+
+git branch -d <branch>           # delete branch
+git push origin --delete <branch>
+
+## FORCE (USE CAREFULLY)
+
+git push --force                 # overwrite remote history
+
+## GOOD PRACTICES
+
+* commit often, small commits
+* write clear commit messages
+* never push .env or secrets
+* always pull before pushing
+* use branches for features
+
+## COMMON ERRORS
+
+# forgot to add .gitignore and pushed .venv:
+
+git rm -r --cached .venv
+git commit -m "remove venv"
+git push
+
+# accidentally committed wrong file:
+
+git restore --staged <file>
+git restore <file>

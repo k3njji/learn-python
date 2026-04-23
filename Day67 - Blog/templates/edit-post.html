@@ -1,0 +1,84 @@
+{% block content %} {% include "header.html" %}
+
+<header class="masthead" style="background-image: url('{{post.img_url}}')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <h1>{{ post.title }}</h1>
+          <h2 class="subheading">{{ post.subtitle }}</h2>
+          <span class="meta"
+            >Posted by
+            <a href="#">{{ post.author }}</a>
+            on {{ post.date }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <form method="POST" action="{{ url_for('edit_post', post_id=post.id) }}">
+				{{ form.hidden_tag() }}
+				{{ form.title.label }} <br> {{ form.title(size=20) }}
+
+				{% if form.title.errors %}
+					<ul class="errors">
+					{% for error in form.title.errors %}
+						<li>{{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<br>
+				{{ form.subtitle.label }} <br> {{ form.subtitle(size=20) }}
+
+				{% if form.subtitle.errors %}
+					<ul class="errors">
+					{% for error in form.subtitle.errors %}
+						<li>{{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<br>
+				{{ form.author.label }} <br> {{ form.author(size=20) }}
+
+				{% if form.author.errors %}
+					<ul class="errors">
+					{% for error in form.author.errors %}
+						<li>{{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<br>
+				{{ form.img_url.label }} <br> {{ form.img_url(size=20) }}
+
+				{% if form.img_url.errors %}
+					<ul class="errors">
+					{% for error in form.img_url.errors %}
+						<li>{{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<br>
+				{{ form.body.label }} <br> {{ form.body(rows=10, cols=30) }}
+
+				{% if form.body.errors %}
+					<ul class="errors">
+					{% for error in form.body.errors %}
+						<li>{{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				<br>
+				{{form.submit() }}
+			</form>
+      </div>
+    </div>
+  </div>
+</main>
+{% include "footer.html" %} {% endblock %}

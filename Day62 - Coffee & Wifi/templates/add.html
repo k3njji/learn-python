@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+<!--Don't forget your import here-->
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Add a new cafe into the database</h1>
+
+      <!-- This is where your WTForm will go -->
+
+      <form method="POST" action="/submit" class="mt-4">
+  {{ form.csrf_token }}
+
+  <div class="mb-3">
+    {{ form.cafe.label(class="form-label") }}
+    {{ form.cafe(class="form-control") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.url.label(class="form-label") }}
+    {{ form.url(class="form-control") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.open.label(class="form-label") }}
+    {{ form.open(class="form-control") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.close.label(class="form-label") }}
+    {{ form.close(class="form-control") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.coffee.label(class="form-label") }}
+    {{ form.coffee(class="form-select") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.wifi.label(class="form-label") }}
+    {{ form.wifi(class="form-select") }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.power.label(class="form-label") }}
+    {{ form.power(class="form-select") }}
+  </div>
+
+  <button type="submit" class="btn btn-warning w-100">Add Cafe</button>
+</form>
+	  <p class="space-above"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
