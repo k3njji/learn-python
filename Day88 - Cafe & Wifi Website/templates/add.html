@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1>Add a new cafe into the database</h1>
+
+      <form method="post" action="/add">
+        <div class="mb-3">
+          <label>Cafe Name</label>
+          <input type="text" name="cafe" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label>Location</label>
+          <input type="text" name="link" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label>Open Time</label>
+          <input type="text" name="open" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label>Close Time</label>
+          <input type="text" name="close" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+        <label>Coffee Rating</label>
+        <select name="coffee" class="form-control" required>
+          <option value="🍵">🍵</option>
+          <option value="🍵🍵">🍵🍵</option>
+          <option value="🍵🍵🍵">🍵🍵🍵</option>
+          <option value="🍵🍵🍵🍵">🍵🍵🍵🍵</option>
+          <option value="🍵🍵🍵🍵🍵">🍵🍵🍵🍵🍵</option>
+        </select>
+      </div>
+
+       <div class="mb-3">
+        <label>Wifi Rating</label>
+        <select name="wifi" class="form-control" required>
+          <option value="🛜">🛜</option>
+          <option value="🛜🛜">🛜🛜</option>
+          <option value="🛜🛜🛜">🛜🛜🛜</option>
+          <option value="🛜🛜🛜🛜">🛜🛜🛜🛜</option>
+          <option value="🛜🛜🛜🛜🛜">🛜🛜🛜🛜🛜</option>
+        </select>
+      </div>
+
+        <div class="mb-3">
+        <label>Power Rating</label>
+        <select name="power" class="form-control" required>
+          <option value="🔌">🔌</option>
+          <option value="🔌🔌">🔌🔌</option>
+          <option value="🔌🔌🔌">🔌🔌🔌</option>
+          <option value="🔌🔌🔌🔌">🔌🔌🔌🔌</option>
+          <option value="🔌🔌🔌🔌🔌">🔌🔌🔌🔌🔌</option>
+        </select>
+      </div>
+
+        <button type="submit" class="btn btn-primary">Add Cafe</button>
+      </form>
+
+      <p class="space-above mt-3">
+        <a href="/cafes">See all cafes</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
